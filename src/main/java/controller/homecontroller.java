@@ -89,7 +89,8 @@ public class homecontroller {
 		String password=req.getParameter("password");
 		int value=0;
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+	//	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+		Connection con=DriverManager.getConnection("jdbc:mysql://awsdb.cg2a3l4mwr3i.ap-south-1.rds.amazonaws.com:3306/medicare","root","rootraja");
 		Statement st=con.createStatement();
 		ResultSet rs=st.executeQuery("select UserName,Password from userdata_table");
 		while(rs.next())
@@ -127,7 +128,8 @@ public class homecontroller {
 		String password=req.getParameter("password");
 		
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+	//	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+		Connection con=DriverManager.getConnection("jdbc:mysql://awsdb.cg2a3l4mwr3i.ap-south-1.rds.amazonaws.com:3306/medicare","root","rootraja");
 		PreparedStatement ps=con.prepareStatement("insert into userdata_table(UserName,MailId,MobileNo,Address,Password)values(?,?,?,?,?)");
 		ps.setString(1, name);
 		ps.setString(2, mail);
@@ -149,7 +151,8 @@ public class homecontroller {
 		String mail=(String) ses2.getAttribute("Mail");
 		String product=(String) ses2.getAttribute("ProductName");
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+	//  Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+		Connection con=DriverManager.getConnection("jdbc:mysql://awsdb.cg2a3l4mwr3i.ap-south-1.rds.amazonaws.com:3306/medicare","root","rootraja");
 		PreparedStatement ps=con.prepareStatement("insert into kart_table(UserName,MailId,ProductId)values(?,?,?)");
 		ps.setString(1, username);
 		ps.setString(2, mail);
@@ -185,7 +188,8 @@ public class homecontroller {
 		String brand=req.getParameter("brand");
 		String status=req.getParameter("status");
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+	//	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+		Connection con=DriverManager.getConnection("jdbc:mysql://awsdb.cg2a3l4mwr3i.ap-south-1.rds.amazonaws.com:3306/medicare","root","rootraja");
 		PreparedStatement ps=con.prepareStatement("insert into product_table(ProductName,Price,Description,Category,ImgName,ProductType,Brand,Status)values(?,?,?,?,?,?,?,?)");
 		ps.setString(1, productname);
 		ps.setString(2, price);
@@ -212,7 +216,8 @@ public class homecontroller {
 		String brand=req.getParameter("brand");
 		
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+	//	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+		Connection con=DriverManager.getConnection("jdbc:mysql://awsdb.cg2a3l4mwr3i.ap-south-1.rds.amazonaws.com:3306/medicare","root","rootraja");
 		PreparedStatement ps=con.prepareStatement("update product_table set ProductName='"+productname+"', Price='"+price+"', Description='"+description+"', Category='"+category+"', ImgName='"+imgname+"', ProductType='"+producttype+"', Brand='"+brand+"' where Id='"+id+"'");
 		ps.executeUpdate();
 		res.sendRedirect("adminhome.jsp");
@@ -222,7 +227,8 @@ public class homecontroller {
 	{
 		String deleteid=req.getParameter("id");
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+	//	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+		Connection con=DriverManager.getConnection("jdbc:mysql://awsdb.cg2a3l4mwr3i.ap-south-1.rds.amazonaws.com:3306/medicare","root","rootraja");
 		PreparedStatement ps=con.prepareStatement("delete from product_table where Id='"+deleteid+"'");
 		ps.executeUpdate();
 		res.sendRedirect("adminhome.jsp");
@@ -242,14 +248,16 @@ public class homecontroller {
 		//System.out.println(arr[1]);
 		if(arr[1].equals("enable")) {
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+	//	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+		Connection con=DriverManager.getConnection("jdbc:mysql://awsdb.cg2a3l4mwr3i.ap-south-1.rds.amazonaws.com:3306/medicare","root","rootraja");
 		PreparedStatement ps=con.prepareStatement("update product_table set Status='disable' where Id='"+arr[0]+"'");
 		ps.executeUpdate();
 		
 		}else
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+		//	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+			Connection con=DriverManager.getConnection("jdbc:mysql://awsdb.cg2a3l4mwr3i.ap-south-1.rds.amazonaws.com:3306/medicare","root","rootraja");
 			PreparedStatement ps=con.prepareStatement("update product_table set Status='enable' where Id='"+arr[0]+"'");
 			ps.executeUpdate();
 			

@@ -66,7 +66,8 @@
 	<div>
 		<%
 		Class.forName("com.mysql.jdbc.Driver");
-    	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+    //	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+		Connection con=DriverManager.getConnection("jdbc:mysql://awsdb.cg2a3l4mwr3i.ap-south-1.rds.amazonaws.com:3306/medicare","root","rootraja");
     	Statement st=con.createStatement();
     	ResultSet rs=st.executeQuery("select * from product_table where Id='"+id+"'");
     	while(rs.next())
@@ -90,7 +91,8 @@
 		<div class="row">
 		<%
 		Class.forName("com.mysql.jdbc.Driver");
-    	Connection con1=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+  //  	Connection con1=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+		Connection con1=DriverManager.getConnection("jdbc:mysql://awsdb.cg2a3l4mwr3i.ap-south-1.rds.amazonaws.com:3306/medicare","root","rootraja");
     	Statement st1=con1.createStatement();
     	ResultSet rs1=st1.executeQuery("select * from userdata_table where UserName='"+name+"' and Password='"+password+"'");
     	while(rs1.next())
