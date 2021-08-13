@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<link href="/Medicare/resources/CSS/style.css" rel="stylesheet" type="text/css">
+<!--  <link href="/Medicare/resources/CSS/style.css" rel="stylesheet" type="text/css"> -->
 <title>paymentkart</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,6 +19,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
 <style>
+
+	
 	#sec1
 	{
 		padding:50px;margin:50px 100px;border-radius:10px;background-color:white;box-shadow:0 5px 10px -5px;
@@ -26,6 +28,10 @@
 	.row
 	{
 		height:auto;padding:20px;margin:0px;
+	}
+	#form1,#form2,#form3,#form4
+	{
+		margin-bottom:10px;
 	}
 	@media only screen and (max-width:700px)
 	{
@@ -40,7 +46,7 @@
 </head>
 <body style="background-color:#EDF6E5;">
 	<div id="navbar" class="row">
-				<a href="userhome.jsp?msg=<%=name %>"  class="col-lg-2" style="text-decoration:none;color:black;"><div id="logo">Medicare</div></a>
+				<a href="userhome.jsp?msg=<%=name %>"  class="col-lg-2" style="text-decoration:none;color:black;"><div style="font-family:'Montserrat',Sans-serif;">Medicare</div></a>
 	</div>
 		<div id="sec1">
 		<%
