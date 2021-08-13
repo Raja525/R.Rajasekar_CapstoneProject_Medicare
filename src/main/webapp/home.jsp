@@ -34,6 +34,141 @@
 	padding:20px;
 	margin:0px 0px 10px 10px;
 }
+#searchbar
+{
+	width:300px;
+}
+.form-inline
+{
+	padding:0px 0px 0px 50px;
+	float:right;	
+}
+#navbar
+{
+	padding:10px;
+	margin:0px;
+}
+#display
+{
+	background-image:url('/Medicare/resources/IMG/medihome4.jpg');
+	background-size:cover;
+		background-position:center;
+		background-repeat:no-repeat;
+		font-family:'Montserrat',Sans-serif;
+		padding:10vm;
+}
+#searchcontainer
+{
+	padding:0px;
+}
+
+#signin,#kart
+{
+	border:none;
+	background-color:#F8485E;
+}
+/*---------------section2--------------*/
+#section2
+{
+	padding:50px;
+	background-color:#F8485E;
+}
+.title
+{
+	font-family:'Montserrat',sans-serif;
+	font-size:32px;
+	font-weight:600px;
+	text-align:center;
+}
+.row
+{
+	padding:20px 0px;
+}
+.col-3
+{
+	padding:20px;
+}
+.box
+{
+	padding:0px;
+	
+}
+.card{
+	margin:auto;
+	box-shadow:0 8px 16px -4px;
+}
+h5
+{
+	text-align:center;
+}
+/*--------------------section3----------------------*/
+#section3
+{
+	background-color:#FDEFEF;
+	padding:50px;
+}
+#health
+{
+	background-image:url('/Medicare/resources/IMG/healthcarehome.jpg');
+}
+#fitness
+{
+	background-image:url('/Medicare/resources/IMG/fitnesshome2.jpg');
+	color:#0CECDD;
+}
+#beauty
+{
+	background-image:url('/Medicare/resources/IMG/beautyhome.jpg');
+	color:#FF4C29;
+}
+#medicine
+{
+	background-image:url('/Medicare/resources/IMG/madicineshome.jpg');
+	color:black;
+}
+.container
+{
+	height:300px;
+	margin:50px 0px;
+	background-size:cover;
+		background-position:center;
+		background-repeat:no-repeat;
+		font-family:'Montserrat',sans-serif;
+		font-weight:600px;
+		font-size:32px;
+		box-shadow:0 6px 12px -4px black;
+		border-radius:10px;
+		text-align:center;
+		padding:100px;
+		color:#DF5E5E;
+}
+.a
+{
+	text-decoration:none;
+}
+/*--------------------section4-----------*/
+#section4
+{
+	background-color:black;
+	padding:30px;
+	color:white;
+}
+#section4 .row
+{
+	margin:0px;
+}
+.footer
+{
+	padding:20px;
+}
+.footer #sec1,.footer #sec2
+{
+	border-right:solid 1px white;
+}
+#sec1,#sec2,#sec3
+{
+	height:200px;
+}
 
 /*---------------------------------------------------*/
 	@media only screen and (max-width:700px)

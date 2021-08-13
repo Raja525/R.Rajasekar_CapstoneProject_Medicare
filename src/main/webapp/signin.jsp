@@ -12,6 +12,44 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
 <style>
+#div1
+{
+	height:625px;
+	background-image:url('/Medicare/resources/IMG/beautyhome.jpg');
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+#div2
+{
+	height:auto;
+	padding:20% 10% 10% 10%;
+}
+#set
+{
+	margin:0px;
+	padding:0px;
+}
+#in1,#in2,#in3
+{
+	margin-bottom:10px;
+}
+.form-control{
+	margin-bottom:10px;
+}
+#n1,#n2,#n3,#n4,#n5,#n6,#n7,#n8{
+	text-decoration:none;
+	color:black;
+}
+#n1,#n2,#n3,#n4,#n5,#n6,#n7,#n8:hover
+{
+	text-decoration:none;
+	color:black;
+}
+span
+{
+font-family:'Montserrat',sans-serif;	
+}
 @media (max-width:700px)
 {
 	#form
