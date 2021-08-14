@@ -33,7 +33,7 @@
 }
 #display
 {
-	background-image:url('/Medicare/resources/IMG/medihome4.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/medihome4.jpg');
 	background-size:cover;
 		background-position:center;
 		background-repeat:no-repeat;
@@ -92,21 +92,21 @@ h5
 }
 #health
 {
-	background-image:url('/Medicare/resources/IMG/healthcarehome.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/healthcarehome.jpg');
 }
 #fitness
 {
-	background-image:url('/Medicare/resources/IMG/fitnesshome2.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/fitnesshome2.jpg');
 	color:#0CECDD;
 }
 #beauty
 {
-	background-image:url('/Medicare/resources/IMG/beautyhome.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/beautyhome.jpg');
 	color:#FF4C29;
 }
 #medicine
 {
-	background-image:url('/Medicare/resources/IMG/madicineshome.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/madicineshome.jpg');
 	color:black;
 }
 .container
@@ -183,7 +183,7 @@ h5
 #div1
 {
 	height:625px;
-	background-image:url('/Medicare/resources/IMG/beautyhome.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/beautyhome.jpg');
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position:center;

@@ -52,7 +52,7 @@
 }
 #display
 {
-	background-image:url('/Medicare/resources/IMG/medihome4.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/medihome4.jpg');
 	background-size:cover;
 		background-position:center;
 		background-repeat:no-repeat;
@@ -111,21 +111,21 @@ h5
 }
 #health
 {
-	background-image:url('/Medicare/resources/IMG/healthcarehome.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/healthcarehome.jpg');
 }
 #fitness
 {
-	background-image:url('/Medicare/resources/IMG/fitnesshome2.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/fitnesshome2.jpg');
 	color:#0CECDD;
 }
 #beauty
 {
-	background-image:url('/Medicare/resources/IMG/beautyhome.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/beautyhome.jpg');
 	color:#FF4C29;
 }
 #medicine
 {
-	background-image:url('/Medicare/resources/IMG/madicineshome.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/madicineshome.jpg');
 	color:black;
 }
 .container
@@ -202,7 +202,7 @@ h5
 #div1
 {
 	height:625px;
-	background-image:url('/Medicare/resources/IMG/beautyhome.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/beautyhome.jpg');
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position:center;
@@ -275,7 +275,7 @@ font-family:'Montserrat',sans-serif;
 }
 #display
 {
-	background-image:url('/Medicare/resources/IMG/medihome4.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/medihome4.jpg');
 	background-size:cover;
 		background-position:center;
 		background-repeat:no-repeat;
@@ -334,21 +334,21 @@ h5
 }
 #health
 {
-	background-image:url('/Medicare/resources/IMG/healthcarehome.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/healthcarehome.jpg');
 }
 #fitness
 {
-	background-image:url('/Medicare/resources/IMG/fitnesshome2.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/fitnesshome2.jpg');
 	color:#0CECDD;
 }
 #beauty
 {
-	background-image:url('/Medicare/resources/IMG/beautyhome.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/beautyhome.jpg');
 	color:#FF4C29;
 }
 #medicine
 {
-	background-image:url('/Medicare/resources/IMG/madicineshome.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/madicineshome.jpg');
 	color:black;
 }
 .container
@@ -485,7 +485,7 @@ h5
 			<div class="col-lg-3 col-sm-6 col-md-6">
 				<a id="n1" href="page3.jsp?msg=<%=rs2.getString("ProductName")%>"><div class="box">
 					<div class="card" style="width: 14rem;">
-  					<img class="card-img-top" src="/Medicare/resources/IMG/<%=rs2.getString("ImgName") %>" alt="Card image cap">
+  					<img class="card-img-top" src="https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs2.getString("ImgName") %>" alt="Card image cap">
   					<div class="card-body">
   						<h5 class="card-title"><%=rs2.getString("ProductName") %></h5>
     				</div>
@@ -509,7 +509,7 @@ h5
 			<div class="col-lg-3 col-sm-6 col-md-6">
 				<a id="n5" href="page3.jsp?msg=<%=rs1.getString("ProductName")%>"><div class="box">
 					<div class="card" style="width: 14rem;">
-  					<img class="card-img-top" src="/Medicare/resources/IMG/<%=rs1.getString("ImgName") %>" alt="Card image cap">
+  					<img class="card-img-top" src="https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs1.getString("ImgName") %>" alt="Card image cap">
   					<div class="card-body">
   						<h5 class="card-title"><%=rs1.getString("ProductName") %></h5>
     				</div>

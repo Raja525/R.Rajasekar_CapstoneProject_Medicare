@@ -40,7 +40,7 @@
 }
 #display
 {
-	background-image:url('/Medicare/resources/IMG/medihome4.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/medihome4.jpg');
 	background-size:cover;
 		background-position:center;
 		background-repeat:no-repeat;
@@ -99,21 +99,21 @@ h5
 }
 #health
 {
-	background-image:url('/Medicare/resources/IMG/healthcarehome.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/healthcarehome.jpg');
 }
 #fitness
 {
-	background-image:url('/Medicare/resources/IMG/fitnesshome2.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/fitnesshome2.jpg');
 	color:#0CECDD;
 }
 #beauty
 {
-	background-image:url('/Medicare/resources/IMG/beautyhome.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/beautyhome.jpg');
 	color:#FF4C29;
 }
 #medicine
 {
-	background-image:url('/Medicare/resources/IMG/madicineshome.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/madicineshome.jpg');
 	color:black;
 }
 .container
@@ -190,7 +190,7 @@ h5
 #div1
 {
 	height:625px;
-	background-image:url('/Medicare/resources/IMG/beautyhome.jpg');
+	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/beautyhome.jpg');
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position:center;
@@ -281,7 +281,7 @@ font-family:'Montserrat',sans-serif;
     	{
 		%>
 		<div class="row" style="height:300px;padding:40px 50px;margin:0px;">
-			<div class="col-md-4 col-sm-6" style="height:100%;background-image:url('/Medicare/resources/IMG/<%=rs.getString("ImgName") %>');background-size:cover;background-repeat:no-repeat;background-position:center;"></div>
+			<div class="col-md-4 col-sm-6" style="height:100%;background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs.getString("ImgName") %>');background-size:cover;background-repeat:no-repeat;background-position:center;"></div>
 			<div class="col-md-8 col-sm-6" style="padding:0px 5%">
 				<div class="" style="font-family:'Montserrat',sans-serif;"><%=rs.getString("ProductName") %></div>
 				<span><%=rs.getString("Brand") %>(<%=rs.getString("ProductType") %>)</span>
