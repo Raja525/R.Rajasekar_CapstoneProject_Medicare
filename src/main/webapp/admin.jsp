@@ -222,7 +222,7 @@ font-family:'Montserrat',sans-serif;
 </head>
 <body>
 	<div class="row" id="set">
-		<div class="col-6 inner" style="box-shadow:6px 0px 12px -4px black;height:620px;padding:50px;background-image:url('/Medicare/resources/IMG/admin.jpg');background-size:cover;background-position:bottom;background-repeat:no-repeat;">	
+		<div class="col-6 inner" style="box-shadow:6px 0px 12px -4px black;height:620px;padding:50px;background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/admin.jpg');background-size:cover;background-position:bottom;background-repeat:no-repeat;">	
 				<div style="text-align:center;padding:20px;height:320px;font-family:'Montserrat',sans-serif;">Admin RJ</div>
 		</div>
 		<div class="col-6">
