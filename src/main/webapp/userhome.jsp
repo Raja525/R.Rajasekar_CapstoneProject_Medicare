@@ -47,7 +47,7 @@
 }
 #navbar
 {
-	padding:10px;
+	padding:1rem;
 	margin:0px;
 }
 #display
@@ -57,7 +57,7 @@
 		background-position:center;
 		background-repeat:no-repeat;
 		font-family:'Montserrat',Sans-serif;
-		padding:10vm;
+		padding:1rem;
 }
 #searchcontainer
 {
@@ -240,15 +240,7 @@ font-family:'Montserrat',sans-serif;
 /*-----------------------------------------------------------*/
 	
 	
-#display
-	{
-		padding:1rem;
-	}
-	#navbar
-{
-	padding:1rem;
-	margin:0px;
-}
+
 #quote
 {
 	color:gray;
@@ -382,19 +374,15 @@ h5
 {
 	margin:0px;
 }
-.footer
-{
-	padding:20px;
-}
-.footer #sec1,.footer #sec2
-{
-	border-right:solid 1px white;
-}
 #sec1,#sec2,#sec3
 {
 	height:200px;
+	border-right:solid 1px white;
 }
-
+#sec3
+{
+	border:none;
+}
 /*---------------------------------------------------*/
 	@media only screen and (max-width:700px)
 {
@@ -445,6 +433,26 @@ h5
 		top:1rem;
 		right:5rem;
 	}
+	.container
+	{
+		padding:100px 0px;
+	}
+	#sec1,#sec2,#sec3
+	{
+		height:auto;
+		padding:5%;
+		border:none;
+	}
+	#sec1
+	{
+		text-align:center;
+	}
+	#kart
+	{
+		position:absolute;
+		top:2%;
+		right:6%;
+	}
 }
 </style>
 </head>
@@ -461,7 +469,7 @@ h5
 					</form>
 				</div>
 				<div class="col-1" style="padding-top:0px;">
-					<a href="kart.jsp?msg=<%=name %>"><button class="btn" id="kart"><i class="fa fa-cart-plus"></i></button></a>
+					<a id="kart" href="kart.jsp?msg=<%=name%>"><button class="btn btn-danger"><i class="fa fa-cart-plus"></i></button></a>
 				</div>
 				<div class="col-1" style="padding-top:0px;">
 					<a href="home.jsp" id="homename" style="margin-right:10px;"><button class="btn" ><i class="fa fa-user"></i> <%=name %></button></a>
@@ -532,15 +540,15 @@ h5
 	</div>
 	<div id="section4" class="sec">
 		<div class="row">
-			<div class="col-4 footer"><div id="sec1"> &copy Medicare 2021,pvt.</div></div>
-			<div class="col-4 footer"><div id="sec2">
+			<div class="col-md-4 col-sm-12"><div id="sec1"> &copy Medicare 2021,pvt.</div></div>
+			<div class="col-md-4 col-sm-12"><div id="sec2">
 			<div style="font-family:'Montserrat',sans-serif;">Follow us</div>
 				<p>Insta: rajasekar6667</p>
 				<p>Facebook: rajasekar</p>
 				<p>What's app: 8220743247</p>
 			</div>
 			</div>
-			<div class="col-4 footer"><div id="sec3">
+			<div class="col-md-4 col-sm-12"><div id="sec3">
 				<div style="font-family:'Montserrat',sans-serif;">Contact Us</div>
 					<p>Mail id: rajasekar.rs525@gmail.com</p>
 					<p>Phone no: 8220743247</p>

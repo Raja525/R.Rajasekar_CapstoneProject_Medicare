@@ -228,53 +228,73 @@ span
 {
 font-family:'Montserrat',sans-serif;	
 }
-/*---------------------------------------------------------------*/
-	
-	
-#searchbar
-{
-	width:100%;
-	padding:2%;
-}
-#row
+#itembox
 {
 	height:540px;padding:40px 50px;margin:0px;
 }
-.form-inline
+#itemboximg
 {
-	padding:0px;
+	heigth:100%;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
 }
+#itemboxmsg
+{
+	padding:50px 40px;
+}
+/*-------------------------------------------------------------------*/
 	@media only screen and (max-width:700px)
 	{
-		#row
+		#searchbar
 		{
-		padding:2% 4%;
-		margin:0px;
-		height:300px;
+			width:60%;
 		}
-		#content
+		.form-inline
 		{
-			padding:2%;
+			padding:0px;
 		}
-		
+		#searchcontainer
+		{
+			padding:5% 1%;
+		}
+		#itembox
+		{
+			padding:5%;
+		}
+		#itemboxmsg
+		{
+			padding:8% 5%;
+		}
+		#itemboximg
+		{
+			height:300px;
+		}
+		#kart
+		{
+			position:absolute;
+			top:1%;
+			right:6%;
+		}
 	}
+	
 </style>
 </head>
 <body>
 	<div>
 		<div id="navbar" class="row" style="margin:0px;">
-				<a href="userhome.jsp?msg=<%=name %>"  class="col-2" style="text-decoration:none;color:black;"><div id="logo">Medicare</div></a>
-				<div class="col-9" id="searchcontainer">
-					<form action="" method="post" class="form-inline">
+				<a href="userhome.jsp?msg=<%=name %>"  class="col-md-2 col-sm-12" style="text-decoration:none;color:black;"><div id="logo">Medicare</div></a>
+				<div class="col-md-9 col-sm-12" id="searchcontainer">
+					<form action="search" method="post" class="form-inline">
 					<input placeholder="search" type="search" name="search" id="searchbar" class="form-control"  style="display:inline-block; ">
-					<input type="submit" class="btn" value="search" style="display:inline-block;padding-top:5px ">
+					<button type="submit" class="btn" style="display:inline-block;padding-top:5px "><i class="fa fa-search"></i></button>
 					</form>
 				</div>
-				<div class="col-1">
-				<a href="kart.jsp"><button class="btn" id="kart"><i class="fa fa-cart-plus"></i></button></a>
+				<div class="col-md-1">
+				<a href="kart.jsp" id="kart"><button class="btn" id="kart"><i class="fa fa-cart-plus"></i></button></a>
 				</div>
 		</div>
-		<div class="row" id="row">
+		<div class="row" id="itembox">
 			<%
 			
 			Class.forName("com.mysql.jdbc.Driver");
@@ -284,8 +304,8 @@ font-family:'Montserrat',sans-serif;
 			ResultSet rs=st.executeQuery("select * from product_table where ProductName='"+msg+"'");
 			while(rs.next()){
 			%>
-			<div class="col-md-5 col-sm-4" style="height:100%;background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs.getString("ImgName") %>');background-size:cover;background-repeat:no-repeat;background-position:center;"></div>
-			<div class="col-md-7 col-sm-8" id="content" style="padding:50px 40px;">
+			<div class="col-md-5 col-sm-12" id="itemboximg" style="background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs.getString("ImgName") %>');"></div>
+			<div class="col-md-7 col-sm-12" id="itemboxmsg">
 						<div style="font-family:'Montserrat',sans-serif;"><%=rs.getString("ProductName") %></div>
 						<h3><%=rs.getString("Brand") %> (<%=rs.getString("ProductType") %>)</h3>
 						<div>Category:<%=rs.getString("Category") %></div>

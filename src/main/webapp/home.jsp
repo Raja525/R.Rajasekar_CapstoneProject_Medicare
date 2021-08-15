@@ -39,7 +39,7 @@
 		background-position:center;
 		background-repeat:no-repeat;
 		font-family:'Montserrat',Sans-serif;
-		padding:10vm;
+		padding:1rem;
 }
 #searchcontainer
 {
@@ -51,6 +51,11 @@
 	border:none;
 	background-color:#F8485E;
 }
+
+
+	
+	
+
 /*---------------section2--------------*/
 #section2
 {
@@ -219,18 +224,6 @@ span
 {
 font-family:'Montserrat',sans-serif;	
 }
-/*---------------------------------------------------------------------*/
-	
-	
-#display
-	{
-		padding:1rem;
-	}
-	#navbar
-{
-	padding:1rem;
-	margin:0px;
-}
 #quote
 {
 	color:gray;
@@ -241,103 +234,31 @@ font-family:'Montserrat',sans-serif;
 	padding:20px;
 	margin:0px 0px 10px 10px;
 }
-#searchbar
+/*---------------------------------------------------*/
+@media only screen and (max-width:700px)
 {
-	width:300px;
-}
-.form-inline
-{
-	padding:0px 0px 0px 50px;
-	float:right;	
-}
-#navbar
-{
-	padding:10px;
-	margin:0px;
-}
-#display
-{
-	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/medihome4.jpg');
-	background-size:cover;
-		background-position:center;
-		background-repeat:no-repeat;
-		font-family:'Montserrat',Sans-serif;
-		padding:10vm;
-}
-#searchcontainer
-{
-	padding:0px;
-}
-
-#signin,#kart
-{
-	border:none;
-	background-color:#F8485E;
-}
-/*---------------section2--------------*/
-#section2
-{
-	padding:50px;
-	background-color:#F8485E;
-}
-.title
-{
-	font-family:'Montserrat',sans-serif;
-	font-size:32px;
-	font-weight:600px;
-	text-align:center;
-}
-.row
-{
-	padding:20px 0px;
-}
-.col-3
-{
+	#quote
+	{
+	color:gray;
+	font-size:9vw;
+	font-weight:800px;
+	width:60%;
+	border:solid 1px black;
 	padding:20px;
-}
-.box
-{
-	padding:0px;
-	
-}
-.card{
-	margin:auto;
-	box-shadow:0 8px 16px -4px;
-}
-h5
-{
-	text-align:center;
-}
-/*--------------------section3----------------------*/
-#section3
-{
-	background-color:#FDEFEF;
-	padding:50px;
-}
-#health
-{
-	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/healthcarehome.jpg');
-}
-#fitness
-{
-	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/fitnesshome2.jpg');
-	color:#0CECDD;
-}
-#beauty
-{
-	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/beautyhome.jpg');
-	color:#FF4C29;
-}
-#medicine
-{
-	background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/madicineshome.jpg');
-	color:black;
-}
-.container
-{
-	height:300px;
-	margin:50px 0px;
-	background-size:cover;
+	margin:0px 0px 10px 10px;
+	}
+	#navbar
+	{
+		padding:1%;
+		width:100%;
+		height:10rem;
+		margin-bottom:5%;
+	}
+	.container
+	{
+		height:300px;
+		margin:50px 0px;
+		background-size:cover;
 		background-position:center;
 		background-repeat:no-repeat;
 		font-family:'Montserrat',sans-serif;
@@ -346,46 +267,8 @@ h5
 		box-shadow:0 6px 12px -4px black;
 		border-radius:10px;
 		text-align:center;
-		padding:100px;
 		color:#DF5E5E;
-}
-.a
-{
-	text-decoration:none;
-}
-/*--------------------section4-----------*/
-#section4
-{
-	background-color:black;
-	padding:30px;
-	color:white;
-}
-#section4 .row
-{
-	margin:0px;
-}
-.footer
-{
-	padding:20px;
-}
-.footer #sec1,.footer #sec2
-{
-	border-right:solid 1px white;
-}
-#sec1,#sec2,#sec3
-{
-	height:200px;
-}
-
-/*---------------------------------------------------*/
-	@media only screen and (max-width:700px)
-{
-	#navbar
-	{
-		padding:1%;
-		width:100%;
-		height:10rem;
-		margin-bottom:5%;
+		padding:100px 0;
 	}
 	#searchbar
 	{
@@ -417,10 +300,24 @@ h5
 	p{
 	font-size:2vw;
 	}
-	#section4 .row
+	#section4
 	{
-	padding:20px;
+	padding:1%;
 	}
+	.row{
+	margin:0px;
+	
+	}
+	#sec1,#sec2,#sec3
+	{
+		height:auto;
+		padding:5%;
+	}
+	#sec1
+	{
+		text-align:center;
+	}
+	
 }
 </style>
 </head>
@@ -505,15 +402,15 @@ h5
 	</div>
 	<div id="section4" class="sec">
 		<div class="row">
-			<div class="col-4 footer"><div id="sec1"> &copy Medicare 2021,pvt.</div></div>
-			<div class="col-4 footer"><div id="sec2">
+			<div class="col-md-4 col-sm-12"><div id="sec1"> &copy Medicare 2021,pvt.</div></div>
+			<div class="col-md-4 col-sm-12"><div id="sec2">
 			<div style="font-family:'Montserrat',sans-serif;">Follow us</div>
 				<p>Insta: rajasekar6667</p>
 				<p>Facebook: rajasekar</p>
 				<p>What's app: 8220743247</p>
 			</div>
 			</div>
-			<div class="col-4 footer"><div id="sec3">
+			<div class="col-md-4 col-sm-12"><div id="sec3">
 				<div style="font-family:'Montserrat',sans-serif;">Contact Us</div>
 					<p>Mail id: rajasekar.rs525@gmail.com</p>
 					<p>Phone no: 8220743247</p>

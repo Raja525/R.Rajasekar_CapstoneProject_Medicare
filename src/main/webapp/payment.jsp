@@ -24,7 +24,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-@charset "ISO-8859-1";
+	@charset "ISO-8859-1";
 
 /*---------------section1--------------*/
 #searchbar
@@ -228,34 +228,36 @@ span
 {
 font-family:'Montserrat',sans-serif;	
 }
-/*-------------------------------------------------------------*/
-	
-	
-	#row
-	{
-		height:440px;padding:40px 50px;margin:0px;
-	}
-	#content
-	{
-		padding:20px 40px;
-	}
-	.form-inline
+#item
 {
-	padding:0px;
+	height:540px;padding:40px 50px;margin:0px;
 }
-		@media only screen and (max-width:700px)
+#itemimg
+{
+	heigth:100%;
+	background-size:cover;background-repeat:no-repeat;background-position:center;
+}
+#content
+{
+	padding:20px 40px;
+}
+/*--------------------------------------------------------------------*/
+	@media only screen and (max-width:700px)
 	{
-		#row
-		{
-			padding:2% 4%;
-			margin:0px;
-			height:300px;
-		}
 		#content
 		{
-			padding:1% 4%;
+			padding:8% 5%;
+		}
+		#itemimg
+		{
+			height:300px;
+		}
+		#item
+		{
+			padding:5%;
 		}
 	}
+	
 </style>
 </head>
 <body>
@@ -268,11 +270,11 @@ font-family:'Montserrat',sans-serif;
 	ResultSet rs=st.executeQuery("select * from product_table where Id='"+id+"'");
 	while(rs.next()){
 	%>
-	<div style="margin:10% 0;">
+	<div>
 			<a href="notuser3.jsp?msg=<%=rs.getString("ProductName") %>" style="text-decoration:none;color:black;">
-					<div class="row" id="row">
-						<div class="col-md-4 col-sm-4" style="heigth:100%;background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs.getString("ImgName") %>');background-size:cover;background-repeat:no-repeat;background-position:center;"></div>
-						<div class="col-md-8 col-sm-8" id="content">
+					<div class="row" id="item">
+						<div id="itemimg" class="col-md-4 col-sm-12" style="background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs.getString("ImgName") %>');background-size:cover;background-repeat:no-repeat;background-position:center;"></div>
+						<div class="col-md-8 col-sm-12" id="content">
 							<div class="" style="font-family:'Montserrat',sans-serif;"><%=rs.getString("ProductName") %></div>
 							<span><%=rs.getString("Brand") %>(<%=rs.getString("ProductType") %>)</span>
 							<div>Category: <%=rs.getString("Category") %></div>

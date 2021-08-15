@@ -260,12 +260,7 @@ font-family:'Montserrat',sans-serif;
 }
 @media (max-width:700px)
 {
-	#form
-	{
-		position:absolute;
-		top:0;
-		background-color:transparent;
-	}
+	
 	#div1
 {
 	height:100%;
@@ -280,8 +275,8 @@ font-family:'Montserrat',sans-serif;
 </head>
 <body>
 	<div class="row" id="set">
-		<div class="col-lg-6 col-md-12 col-sm-12" id="div1"></div>
-		<div class="col-lg-6 col-md-12 col-sm-12" id="form">
+		<div class="col-lg-6 col-md-6 col-sm-6" id="div1"></div>
+		<div class="col-lg-6 col-md-6 col-sm-6" id="form">
 			<div style="text-align:center;font-family:'Montserrat',sans-serif;padding:20px;">SignIn</div>
 			<div  id="div2">
 			<form action="signin" method="post">

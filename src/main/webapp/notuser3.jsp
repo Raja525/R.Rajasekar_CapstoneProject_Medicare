@@ -18,6 +18,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet"> 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 @charset "ISO-8859-1";
 
@@ -223,25 +225,66 @@ span
 {
 font-family:'Montserrat',sans-serif;	
 }
+#itembox
+{
+	height:540px;padding:40px 50px;margin:0px;
+}
+#itemboximg
+{
+	heigth:100%;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+#itemboxmsg
+{
+	padding:50px 40px;
+}
 /*-------------------------------------------------------------------*/
-	
+	@media only screen and (max-width:700px)
+	{
+		#searchbar
+		{
+			width:60%;
+		}
+		.form-inline
+		{
+			padding:0px;
+		}
+		#searchcontainer
+		{
+			padding:5% 1%;
+		}
+		#itembox
+		{
+			padding:5%;
+		}
+		#itemboxmsg
+		{
+			padding:8% 5%;
+		}
+		#itemboximg
+		{
+			height:300px;
+		}
+	}
 	
 </style>
 </head>
 <body>
 	<div>
 		<div id="navbar" class="row">
-			<a href="home.jsp"  class="col-2" style="text-decoration:none;color:black;"><div id="logo">Medicare</div></a>
-				<div class="col-10" id="searchcontainer">
-					<form action="" method="post" class="form-inline">
+			<a href="home.jsp"  class="col-lg-2 col-md-2 col-sm-12" style="text-decoration:none;color:black;"><div id="logo">Medicare</div></a>
+				<div class="col-lg-10 col-md-10 col-sm-12" id="searchcontainer">
+					<form action="search" method="post" class="form-inline">
 					<input placeholder="search" type="search" name="search" id="searchbar" class="form-control"  style="display:inline-block; ">
-					<input type="submit" class="btn" value="search" style="display:inline-block;padding-top:5px ">
+					<button type="submit" class="btn" style="display:inline-block;padding-top:5px "><i class="fa fa-search"></i></button>
 					</form>
 				</div>
 				
 		</div>
 		
-		<div class="row" style="height:540px;padding:40px 50px;margin:0px;">
+		<div class="row" id="itembox">
 			<%
 			
 			Class.forName("com.mysql.jdbc.Driver");
@@ -252,10 +295,10 @@ font-family:'Montserrat',sans-serif;
 			while(rs.next()){
 			%>
 			
-			<div class="col-5" style="heigth:100%;background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs.getString("ImgName") %>');background-size:cover;background-repeat:no-repeat;background-position:center;">
+			<div class="col-md-5 col-sm-12" id="itemboximg" style="background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs.getString("ImgName") %>');">
 			</div>
 		
-			<div class="col-7" style="padding:50px 40px;">
+			<div class="col-md-7 col-sm-12" id="itemboxmsg">
 						<div style="font-family:'Montserrat',sans-serif;"><%=rs.getString("ProductName") %></div>
 						<h3><%=rs.getString("Brand") %> (<%=rs.getString("ProductType") %>)</h3>
 						<div>Category:<%=rs.getString("Category") %></div>

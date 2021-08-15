@@ -230,14 +230,6 @@ font-family:'Montserrat',sans-serif;
 {
 	border-right:1px solid black;
 }
-#itemcontent
-{
-	padding:20px 40px;
-}
-#item
-{
-	margin:0px;padding:20px 20px;
-}
 .row
 {
 	margin:0px;padding:0px;
@@ -250,6 +242,22 @@ font-family:'Montserrat',sans-serif;
 {
 	position:fixed;right:1px;
 }
+#itemmsg
+{
+	padding:20px 40px;
+}
+#item
+{
+	margin:0px;
+	padding:1rem;
+}
+#itemimg
+{
+	height:250px;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+}
 @media only screen and (max-width:700px)
 {
 	#displaynone
@@ -261,6 +269,18 @@ font-family:'Montserrat',sans-serif;
 		position:relative;
 		bottom:0;
 	}
+		#itemmsg
+		{
+			padding:8% 5%;
+		}
+		#itemimg
+		{
+			height:300px;
+		}
+		#item
+		{
+			padding:5%;
+		}
 }
 </style>
 </head>
@@ -298,9 +318,9 @@ font-family:'Montserrat',sans-serif;
 			%>
 					 <a href="page3.jsp?msg=<%=rs1.getString("ProductName") %>" style="text-decoration:none;color:black;">
 				  <div id="item" class="row">
-						<div class="col-md-4 col-sm-12 imgcontainer" style="background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs1.getString("ImgName") %>');background-size:cover;background-repeat:no-repeat;background-position:center;">
+						<div class="col-md-4 col-sm-12" id="itemimg" style="background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs1.getString("ImgName") %>');">
 						</div>
-						<div class="col-md-8 col-sm-12" id="itemcontent">
+						<div class="col-md-8 col-sm-12" id="itemmsg">
 							<div style="font-family:'Montserrat',sans-serif;"><%=rs1.getString("ProductName") %></div>
 							<span><%=rs1.getString("Brand") %>(<%=rs1.getString("ProductType") %>)</span>
 							<div>Category: <%=rs1.getString("Category") %></div>

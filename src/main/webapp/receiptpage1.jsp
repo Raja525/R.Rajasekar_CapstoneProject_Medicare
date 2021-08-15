@@ -256,6 +256,39 @@ font-family:'Montserrat',sans-serif;
 	h5{
 	text-align:center;
 	}
+	#itembox
+	{
+	height:540px;padding:40px 50px;margin:0px;
+	}
+	#itemboximg
+	{
+		height:100%;
+		background-size:cover;background-repeat:no-repeat;background-position:center;
+	}
+	#itembixmsg
+	{
+		padding:5%;
+	}
+	
+@media only screen and (max-width:700px)
+{
+	#itembox
+	{
+	 padding:5%;
+	}
+	#itemboximg
+	{
+		height:300px;	
+	}
+	#itembixmsg
+	{
+		padding:8% 5%;
+	}
+	.data
+	{
+		padding:5%;
+	}
+}
 </style>
 </head>
 <body>
@@ -272,9 +305,9 @@ font-family:'Montserrat',sans-serif;
     	while(rs.next())
     	{
 		%>
-		<div class="row" style="height:440px;padding:40px 50px;margin:0px;">
-			<div class="col-4" style="height:100%;background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs.getString("ImgName") %>');background-size:cover;background-repeat:no-repeat;background-position:center;"></div>
-			<div class="col-8" style="padding:0px 5%">
+		<div class="row" id="itembox">
+			<div class="col-md-4 col-sm-12" id="itemboximg" style="background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs.getString("ImgName") %>');"></div>
+			<div class="col-md-8 col-sm-12" id="itemboxmsg">
 				<div class="" style="font-family:'Montserrat',sans-serif;"><%=rs.getString("ProductName") %></div>
 				<span><%=rs.getString("Brand") %>(<%=rs.getString("ProductType") %>)</span>
 				<div>Category: <%=rs.getString("Category") %></div>
@@ -286,17 +319,17 @@ font-family:'Montserrat',sans-serif;
     	}
 		%>
 	</div>
-	<div id="sec2">
+	<div>
 		<div class="row">
-			<div class="col-6">
+			<div class="col-md-6 col-sm-12 data">
 				<h5>Customer Details</h5>
 				<div>
-					<div class="" style="font-family:'Montserrat',sans-serif;"><%=name%></div>
+					<div style="font-family:'Montserrat',sans-serif;"><%=name%></div>
 					<div>Mail: <%=mail %></div>
 					<div>Mobile: <%=mobile %></div>
 				</div>
 			</div>
-			<div class="col-6">
+			<div class="col-md-6 col-sm-12 data">
 				<h5>Shipping Address</h5>
 				<div>
 					<div><span style="font-family:'Montserrat',sans-serif;">Address:</span> <%=address %></div>
@@ -304,8 +337,9 @@ font-family:'Montserrat',sans-serif;
 				</div>
 			</div>
 		</div>
-	</div>
 		<a href="home.jsp"><button class="btn btn-primary" style="width:100%;">Return to Purchase</button></a>
+	</div>
+		
 	</div>
 </body>
 </html>

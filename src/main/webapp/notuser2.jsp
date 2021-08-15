@@ -19,6 +19,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet"> 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 	@charset "ISO-8859-1";
 
@@ -172,7 +174,7 @@ h5
 
 #content
 {
-	padding-left:20px;
+	padding:20px 40px;
 }
 /*------------------------page3------------*/
 
@@ -224,25 +226,80 @@ span
 {
 font-family:'Montserrat',sans-serif;	
 }
+#filter
+{
+padding:10px 20px;border-right:solid 1px;
+}
+#sort
+{
+padding:0 1% 10% 50%;
+}
+#item
+{
+margin:0px;padding:20px 20px;
+}
+#itemimg
+{
+	heigth:100%;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
 /*-----------------------------------------------------------------*/
-	
+@media only screen and (max-width:700px)
+{
+		#searchbar
+		{
+			width:60%;
+		}
+		.form-inline
+		{
+			padding:0px;
+		}
+		#searchcontainer
+		{
+			padding:5% 1%;
+		}
+		#filter
+		{
+			border:none;
+		}
+		#sort
+		{
+			padding:5%;
+		}
+		#content
+		{
+			padding:5%;
+		}
+		#item
+		{
+			padding:5%;
+			border-bottom:solid 1px gray;
+		}
+		#itemimg
+		{
+			height:300px;
+		}
+}
 	
 </style>
 </head>
 <body>
 	<div>
 		<div id="navbar" class="row">
-				<a href="home.jsp"  class="col-2" style="text-decoration:none;color:black;"><div id="logo">Medicare</div></a>
-				<div class="col-10" id="searchcontainer">
+				<a href="home.jsp"  class="col-md-2 col-sm-12" style="text-decoration:none;color:black;"><div id="logo">Medicare</div></a>
+				<div class="col-md-10 col-sm-12" id="searchcontainer">
 					<form action="notuser2" method="post" class="form-inline">
 					<input placeholder="search" type="search" name="search" id="searchbar" class="form-control"  style="display:inline-block; ">
-					<input type="submit" class="btn" value="search" style="display:inline-block;padding-top:5px ">
+					<button type="submit" class="btn" style="display:inline-block;padding-top:5px "><i class="fa fa-search"></i></button>
 					</form>
 				</div>
 				
 		</div>
 		<div class="row" style="margin:0px;">
-			<div class="col-4"  style="padding:10px 20px;border-right:solid 1px;">
+			<div class="col-md-4 col-sm-12" id="filter">
 			
 					
 			<div class="accordion accordion-flush" id="accordionFlushExample">
@@ -300,8 +357,8 @@ font-family:'Montserrat',sans-serif;
 	
 					
 			</div>
-			<div class="col-8" id="itemlist">
-				<div style="padding:0 1% 10% 50%">Sort By : <span><form action="notusersort" method="post" style="display:inline-block;padding:0px 10px;"><input type="submit" class="btn btn-danger" name="sort" value="Price"></form>
+			<div class="col-md-8 col-sm-12" id="itemlist">
+				<div id="sort">Sort By : <span><form action="notusersort" method="post" style="display:inline-block;padding:0px 10px;"><input type="submit" class="btn btn-danger" name="sort" value="Price"></form>
 				<form action="notusersort" method="post" style="display:inline-block;padding:0px 10px;"><input type="submit" name="sort" value="Category" class="btn btn-danger"></form>
 				<form action="notusersort" method="post" style="display:inline-block;padding:0px 10px;"><input type="submit" value="Id" name="sort" class="btn btn-danger"></form>
 				</span>
@@ -331,11 +388,11 @@ font-family:'Montserrat',sans-serif;
 								
 					%>
 					<a href="notuser3.jsp?msg=<%=rs.getString("ProductName") %>" style="text-decoration:none;color:black;">
-					<div id="item" class="row" style="margin:0px;padding:20px 20px;">
-						<div class="col-md-4 imgcontainer" style="background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs.getString("ImgName") %>');background-size:cover;background-repeat:no-repeat;background-position:center;">
+					<div id="item" class="row">
+						<div class="col-md-4 col-sm-12" id="itemimg" style="background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs.getString("ImgName") %>');">
 						</div>
-						<div class="col-md-8" id="content" style="padding:20px 40px;">
-							<div class="" style="font-family:'Montserrat',sans-serif;"><%=rs.getString("ProductName") %></div>
+						<div class="col-md-8 col-sm-12" id="content">
+							<div style="font-family:'Montserrat',sans-serif;"><%=rs.getString("ProductName") %></div>
 							<span><%=rs.getString("Brand") %>(<%=rs.getString("ProductType") %>)</span>
 							<div>Category: <%=rs.getString("Category") %></div>
 							<p>Description:<br><%=rs.getString("Description") %>

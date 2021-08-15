@@ -22,7 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-@charset "ISO-8859-1";
+	@charset "ISO-8859-1";
 
 /*---------------section1--------------*/
 #searchbar
@@ -174,7 +174,7 @@ h5
 
 #content
 {
-	padding-left:20px;
+	padding:20px 40px;
 }
 /*------------------------page3------------*/
 
@@ -226,51 +226,84 @@ span
 {
 font-family:'Montserrat',sans-serif;	
 }
-/*-------------------------------------------------------------*/
-	
-	
 #filter
 {
-	padding:10px 20px;border-right:solid 1px;
+padding:10px 20px;border-right:solid 1px;
 }
 #sort
 {
-	padding:0 1% 10% 50%;
+padding:0 1% 10% 50%;
 }
-#searchbar
+#item
 {
-	width:100%;
-	padding:2%;
+margin:0px;padding:20px 20px;
 }
-.form-inline
+#itemimg
 {
-	padding:0px;
+	heigth:100%;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
 }
+
+/*-----------------------------------------------------------------*/
 @media only screen and (max-width:700px)
 {
-	#filter{
-		padding:1% 10%;border:none;
-	}
-	#sort
-	{
-		padding:5% 10%;
-		justify-content:center;
-	}
+		#searchbar
+		{
+			width:60%;
+		}
+		.form-inline
+		{
+			padding:0px;
+		}
+		#searchcontainer
+		{
+			padding:5% 1%;
+		}
+		#filter
+		{
+			border:none;
+		}
+		#sort
+		{
+			padding:5%;
+		}
+		#content
+		{
+			padding:5%;
+		}
+		#item
+		{
+			padding:5%;
+			border-bottom:solid 1px gray;
+		}
+		#itemimg
+		{
+			height:300px;
+		}
+		#kart
+		{
+			position:absolute;
+			top:1%;
+			right:6%;
+		}
 }
+	
 </style>
 </head>
 <body>
 	<div>
 		<div id="navbar" class="row">
-				<a href="userhome.jsp?msg=<%=name %>"  class="col-2" style="text-decoration:none;color:black;"><div id="logo">Medicare</div></a>
-				<div class="col-9" id="searchcontainer">
+				<a href="userhome.jsp?msg=<%=name %>"  class="col-md-2 col-sm-12" style="text-decoration:none;color:black;"><div id="logo">Medicare</div></a>
+				<div class="col-md-9 col-sm-12" id="searchcontainer">
 					<form action="page2" method="post" class="form-inline">
 					<input placeholder="search" type="search" name="search" id="searchbar" class="form-control"  style="display:inline-block; ">
 					<button type="submit" class="btn" style="display:inline-block;padding-top:5px "><i class="fa fa-search"></i></button>
 					</form>
 				</div>
-				<div class="col-1">
-				<a href="kart.jsp"><button class="btn" id="kart"><i class="fa fa-cart-plus"></i></button></a>
+				<div class="col-md-1">
+				<a href="kart.jsp" id="kart"><button class="btn"><i class="fa fa-cart-plus"></i></button></a>
 				</div>
 		</div>
 		<div class="row" style="margin:0px;">
@@ -365,10 +398,10 @@ font-family:'Montserrat',sans-serif;
 								
 					%>
 					<a href="page3.jsp?msg=<%=rs.getString("ProductName") %>" style="text-decoration:none;color:black;">
-					<div id="item" class="row" style="margin:0px;padding:20px 20px;">
-						<div class="col-md-4 col-sm-6 imgcontainer" style="background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs.getString("ImgName") %>');background-size:cover;background-repeat:no-repeat;background-position:center;">
+					<div id="item" class="row">
+						<div class="col-md-4 col-sm-12" id="itemimg" style="background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs.getString("ImgName") %>');">
 						</div>
-						<div class="col-md-8 col-sm-6" id="content"  style="padding:20px 40px;">
+						<div class="col-md-8 col-sm-12" id="itemmsg">
 							<div class="" style="font-family:'Montserrat',sans-serif;"><%=rs.getString("ProductName") %></div>
 							<span><%=rs.getString("Brand") %>(<%=rs.getString("ProductType") %>)</span>
 							<div>Category: <%=rs.getString("Category") %></div>

@@ -223,8 +223,35 @@ span
 {
 font-family:'Montserrat',sans-serif;	
 }
+#item
+{
+	height:540px;padding:40px 50px;margin:0px;
+}
+#itemimg
+{
+	heigth:100%;
+	background-size:cover;background-repeat:no-repeat;background-position:center;
+}
+#content
+{
+	padding:20px 40px;
+}
 /*--------------------------------------------------------------------*/
-	
+	@media only screen and (max-width:700px)
+	{
+		#content
+		{
+			padding:8% 5%;
+		}
+		#itemimg
+		{
+			height:300px;
+		}
+		#item
+		{
+			padding:5%;
+		}
+	}
 	
 </style>
 </head>
@@ -240,9 +267,9 @@ font-family:'Montserrat',sans-serif;
 	%>
 	<div>
 			<a href="notuser3.jsp?msg=<%=rs.getString("ProductName") %>" style="text-decoration:none;color:black;">
-					<div class="row" style="height:440px;padding:40px 50px;margin:0px;">
-						<div class="col-md-4" style="heigth:100%;background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs.getString("ImgName") %>');background-size:cover;background-repeat:no-repeat;background-position:center;"></div>
-						<div class="col-md-8" id="content" style="padding:20px 40px;">
+					<div class="row" id="item">
+						<div class="col-md-4 col-sm-12" id="itemimg" style="background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs.getString("ImgName") %>');"></div>
+						<div class="col-md-8 col-sm-12" id="content">
 							<div class="" style="font-family:'Montserrat',sans-serif;"><%=rs.getString("ProductName") %></div>
 							<span><%=rs.getString("Brand") %>(<%=rs.getString("ProductType") %>)</span>
 							<div>Category: <%=rs.getString("Category") %></div>
@@ -256,7 +283,7 @@ font-family:'Montserrat',sans-serif;
 	<%} %>
 	<div class="row" id="row" style="margin:0px;">
 				<div style="padding:0px 40px;font-family:'Montserrat',sans-serif;">Payment Details</div>
-	<div class="col-6" style="padding:10px 40px;">
+	<div class="col-md-6 col-sm-12" style="padding:10px 40px;">
 
 			<input type="number" name="cardnumber" placeholder="card number" class="form-control" id="form1" required>
 			<input type="text" name="cardnumber" placeholder="owner name" class="form-control" id="form2" required>
@@ -264,7 +291,7 @@ font-family:'Montserrat',sans-serif;
 			<input type="date" name="cardnumber" placeholder="exp date" class="form-control" id="form4" required>
 			
 	</div>
-	<div class="col-6" style="padding:10px 40px;">
+	<div class="col-md-6 col-sm-12" style="padding:10px 40px;">
 		<div >
 	  			<form action="payment1" method="post">
 	  				<input type="text" name="name" placeholder="Customername" class="form-control" id="form5" required>

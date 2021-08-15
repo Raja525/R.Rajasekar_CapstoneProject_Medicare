@@ -42,6 +42,18 @@
 			margin:1% 4%;
 			height:auto;
 		}
+		#content
+		{
+			padding:8% 5%;
+		}
+		#itemimg
+		{
+			height:300px;
+		}
+		#item
+		{
+			padding:5%;
+		}
 	}
 </style>
 </head>
@@ -75,9 +87,9 @@
 		total=total+Integer.parseInt(rs1.getString("Price"));
 	%>
 			<a href="page3.jsp?msg=<%=rs1.getString("ProductName") %>" style="text-decoration:none;color:black;">
-					<div class="row">
-						<div class="col-md-4 col-sm-6" style="heigth:100%;background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs1.getString("ImgName") %>');background-size:cover;background-repeat:no-repeat;background-position:center;"></div>
-						<div class="col-md-8 col-sm-6" id="content" style="padding:20px 40px;">
+					<div class="row" id="item">
+						<div class="col-md-4 col-sm-12" id="itemimg" style="heigth:100%;background-image:url('https://medicareimage.s3.ap-south-1.amazonaws.com/IMG/<%=rs1.getString("ImgName") %>');background-size:cover;background-repeat:no-repeat;background-position:center;"></div>
+						<div class="col-md-8 col-sm-12" id="content" style="padding:20px 40px;">
 							<div style="font-family:'Montserrat',sans-serif;"><%=rs1.getString("ProductName") %></div>
 							<span><%=rs1.getString("Brand") %>(<%=rs1.getString("ProductType") %>)</span>
 							<div>Category: <%=rs1.getString("Category") %></div>
