@@ -294,7 +294,7 @@ font-family:'Montserrat',sans-serif;
 			<input type="text" name="cardnumber" placeholder="owner name" class="form-control" id="form2" required>
 			<input type="number" name="cardnumber" placeholder="cvv" class="form-control" id="form3" required>
 			<input type="date" name="cardnumber" placeholder="exp date" class="form-control" id="form4" required>
-			<a href="receiptpage.jsp"><input type="submit" onclick="payment()" class="btn btn-primary" name="btn" value="submit"></a>
+			<a href="receiptpage.jsp"><input id="btn" type="submit" onclick="payment()" class="btn btn-primary" name="btn" value="submit"></a>
 		
 	</div>
 	<div class="col-md-5 col-sm-12" style="padding:40px;">
@@ -306,7 +306,7 @@ font-family:'Montserrat',sans-serif;
 	   	
 	   //	System.out.println(name+" "+password);
 	   Class.forName("com.mysql.jdbc.Driver");
-	//	Connection con1=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+//		Connection con1=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
 		Connection con1=DriverManager.getConnection("jdbc:mysql://awsdb.cg2a3l4mwr3i.ap-south-1.rds.amazonaws.com:3306/medicare","root","rootraja");
 		Statement st1=con1.createStatement();
 		ResultSet rs1=st1.executeQuery("select * from userdata_table where UserName='"+name+"' and Password='"+password+"'");

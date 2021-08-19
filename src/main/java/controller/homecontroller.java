@@ -151,7 +151,7 @@ public class homecontroller {
 		String mail=(String) ses2.getAttribute("Mail");
 		String product=(String) ses2.getAttribute("ProductName");
 		Class.forName("com.mysql.jdbc.Driver");
-	//  Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+	//	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
 		Connection con=DriverManager.getConnection("jdbc:mysql://awsdb.cg2a3l4mwr3i.ap-south-1.rds.amazonaws.com:3306/medicare","root","rootraja");
 		PreparedStatement ps=con.prepareStatement("insert into kart_table(UserName,MailId,ProductId)values(?,?,?)");
 		ps.setString(1, username);

@@ -230,8 +230,8 @@ font-family:'Montserrat',sans-serif;
 			<div style="text-align:center;font-family:'Montserrat',sans-serif;padding:20px;">Admin Login</div>
 			<div  id="div2">
 			<form action="admin" method="post">
-				<input type="text" id="in1" name="username" class="form-control" placeholder="Admin Name">
-				<input type="password" id="in2" name="password" class="form-control" placeholder="Password">
+				<input type="text" id="in1" name="username" class="form-control" placeholder="Admin Name" autocomplete="off">
+				<input type="password" id="in2" name="password" class="form-control" placeholder="Password" autocomplete="off">
 				<input type="submit" id="in3" value="SignIn" class="btn btn-primary">
 			</form>
 			</div>

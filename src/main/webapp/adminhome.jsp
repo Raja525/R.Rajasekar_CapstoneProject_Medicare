@@ -271,7 +271,7 @@ font-family:'Montserrat',sans-serif;
 								<th>Delete</th>
 							</tr>
 						</thead>
-						<tbody>
+						<tbody id="tbody">
 				<%
 					Class.forName("com.mysql.jdbc.Driver");
 				//	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
@@ -351,7 +351,7 @@ font-family:'Montserrat',sans-serif;
 							<option value="Enable" selected>Enable</option>
 							<option value="Disable">Disable</option>
 						</select>
-						<input type="submit" class="btn btn-primary" value="Add Product">
+						<input type="submit" id="btn" class="btn btn-primary" value="Add Product">
 					</form>
 				</div>
 			</div>

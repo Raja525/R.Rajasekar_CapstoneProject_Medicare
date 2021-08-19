@@ -249,7 +249,7 @@ font-family:'Montserrat',sans-serif;
 						<input type="text" class="form-control" name="imgname" placeholder="ImgName"  value="<%=rs.getString("ImgName") %>">
 						<input type="text" class="form-control" name="producttype" placeholder="ProductType"  value="<%=rs.getString("ProductType") %>">
 						<input type="text" class="form-control" name="brand" placeholder="Brand"  value="<%=rs.getString("Brand") %>">
-						<input type="submit" class="btn btn-primary" value="Update">
+						<input type="submit" id="btn" class="btn btn-primary" value="Update">
 					</form>
 				</div>
 			</div>
