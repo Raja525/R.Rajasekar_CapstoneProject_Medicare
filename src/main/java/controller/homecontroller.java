@@ -160,6 +160,17 @@ public class homecontroller {
 		ps.executeUpdate();
 		res.sendRedirect("page3.jsp?msg="+product+"");
 	}
+	@RequestMapping("/removekart")
+	public void removekart(HttpServletRequest req,HttpServletResponse res) throws IOException, ClassNotFoundException, SQLException
+	{
+		String remove=req.getParameter("removekart");
+		Class.forName("com.mysql.jdbc.Driver");
+		//	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3307/medicare","root","rootraja");
+			Connection con=DriverManager.getConnection("jdbc:mysql://awsdb.cg2a3l4mwr3i.ap-south-1.rds.amazonaws.com:3306/medicare","root","rootraja");
+			PreparedStatement ps=con.prepareStatement("delete from kart_table where ProductId='"+remove+"'");
+			ps.executeUpdate();
+			res.sendRedirect("kart.jsp");
+	}
 	@RequestMapping("/admin")
 	public void admin(HttpServletRequest req,HttpServletResponse res) throws IOException, ClassNotFoundException, SQLException
 	{
